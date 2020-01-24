@@ -1,7 +1,7 @@
 import { memo, Component } from 'react';
 import cn from 'classnames';
-import ClickOutside from '../click-outside';
-import Button from '../button';
+import ClickOutside from './click-outside';
+import Button from './button';
 
 const EMOJIS = new Map([
   ['😭', 'f62d'],

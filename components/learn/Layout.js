@@ -9,6 +9,7 @@ import Footer from '../footer';
 import PageContent from '../page-content';
 import Container from '../container';
 import SocialMeta from '../social-meta';
+import Feedback from '../feedback';
 import Navigation from './Navigation';
 import Lesson from './Lesson';
 import Markdown from './Markdown';
@@ -33,6 +34,8 @@ const Layout = ({ meta, children }) => (
                       <Lesson meta={meta}>
                         <Markdown>{children}</Markdown>
                       </Lesson>
+                      <hr />
+                      <Feedback />
                     </div>
                   </RecordsProvider>
                 </div>
@@ -41,6 +44,12 @@ const Layout = ({ meta, children }) => (
                     display: flex;
                     margin-top: 1rem;
                     margin-bottom: 5rem;
+                  }
+
+                  hr {
+                    border: 0;
+                    border-top: 1px solid #eaeaea;
+                    margin: 3rem 0 1.25rem 0;
                   }
 
                   .navigation {
