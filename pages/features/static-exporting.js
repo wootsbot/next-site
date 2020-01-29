@@ -22,7 +22,7 @@ export default () => {
     <Page title={title}>
       <SocialMeta
         title={title}
-        description="Leverage the speed and simplicity of static sites with the full power of Next.js"
+        description="Leverage the speed and simplicity of static sites with the full power of Next.js by ZEIT."
         image="/static/twitter-cards/static-exporting.png"
         url="https://nexts.org/features/static-exporting"
         keywords="Static site generation, Static exporting, Static exports, Next, JavaScript, Web Framework"

@@ -76,7 +76,7 @@ const Layout = ({ meta, children }) => (
       image="/static/twitter-cards/learn.png"
       title="Learn | Next.js"
       url="https://nextjs.org/learn"
-      description="Production grade React applications that scale. The world’s leading companies use Next.js to build server-rendered applications, static websites, and more."
+      description="Production grade React applications that scale. The world’s leading companies use Next.js by ZEIT to build server-rendered applications, static websites, and more."
     />
     <SkipNavContent />
     <Footer />

@@ -23,12 +23,12 @@ export default () => {
       <Header shadow>
         <Navbar hideLogo={{ desktop: !isAmp, mobile: !isAmp }} />
       </Header>
-      <Page title="Next.js - The React Framework">
+      <Page title="Next.js by ZEIT - The React Framework">
         <SocialMeta
           image="/static/twitter-cards/home.jpg"
-          title="Next.js - The React Framework"
+          title="Next.js by ZEIT - The React Framework"
           url="https://nextjs.org"
-          description="Production grade React applications that scale. The world’s leading companies use Next.js to build static and dynamic websites and web applications."
+          description="Production grade React applications that scale. The world’s leading companies use Next.js by ZEIT to build static and dynamic websites and web applications."
         />
         <SkipNavContent />
         <Notification href="/blog/next-9-2" title="Next 9.2 is out!" titleMobile="Next 9.2 is out!">

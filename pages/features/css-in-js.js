@@ -31,7 +31,7 @@ export default () => {
       </Head>
       <SocialMeta
         title="Features - CSS-in-JS | Next.js"
-        description="Next.js lets you modularize your styles without the hassle"
+        description="Next.js by ZEIT lets you modularize your styles without the hassle."
         image="/static/twitter-cards/css-in-js.png"
         url="https://nexts.org/features/css-in-js"
         keywords="CSS-in-JS, CSS, JS, Next, JavaScript, Web Framework"

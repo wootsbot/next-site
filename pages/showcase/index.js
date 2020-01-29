@@ -70,7 +70,7 @@ function Showcase({ item }) {
           image="/static/twitter-cards/showcase.png"
           title="Showcase | Next.js"
           url="https://nextjs.org/showcase"
-          description="Meet hundreds of beautiful websites powered by Next.js"
+          description="Meet hundreds of beautiful websites powered by ZEIT's Next.js."
         />
         {item && mapping[item] && <SiteDetail siteData={mapping[item]} />}
         <SkipNavContent />
