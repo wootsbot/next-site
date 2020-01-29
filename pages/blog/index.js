@@ -62,7 +62,15 @@ export default () => (
     <Page title="Blog | Next.js">
       <Screen offset={64 + 400}>
         <Container padding wide>
-          <SectionHeader title="Blog" />
+          <SectionHeader
+            title="Blog"
+            description={
+              <span>
+                The latest news about Next.js <br className="display-mobile" />
+                by the ZEIT team
+              </span>
+            }
+          />
           <SkipNavContent />
           {items}
         </Container>

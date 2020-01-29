@@ -235,6 +235,9 @@ export default class extends React.PureComponent {
                 <div>
                   <Button href="https://github.com/zeit/next.js">GitHub</Button>
                 </div>
+                <div>
+                  <Button href="https://zeit.co">ZEIT</Button>
+                </div>
               </div>
             </div>
           </div>
