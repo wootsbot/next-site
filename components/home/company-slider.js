@@ -1,6 +1,5 @@
 import BackgroundSlider from '../background-slider';
 
-import ZEIT from '../icons/companies/zeit';
 import OpenCollective from '../icons/companies/opencollective';
 import Eaze from '../icons/companies/eaze';
 import MagicLeap from '../icons/companies/magic-leap';
@@ -86,9 +85,6 @@ export default function CompanySlider() {
             </div>
             <div>
               <Hulu />
-            </div>
-            <div>
-              <ZEIT />
             </div>
             <div>
               <Coinbase />
