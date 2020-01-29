@@ -1,5 +1,6 @@
 import BackgroundSlider from '../background-slider';
 
+import ZEIT from '../icons/companies/zeit';
 import OpenCollective from '../icons/companies/opencollective';
 import Eaze from '../icons/companies/eaze';
 import MagicLeap from '../icons/companies/magic-leap';
@@ -59,6 +60,9 @@ export default function CompanySlider() {
           <div>
             <Sesame />
           </div>
+          <div>
+            <Pling />
+          </div>
         </div>
       </BackgroundSlider>
       <div style={{ marginBottom: '1rem' }} />
@@ -84,6 +88,9 @@ export default function CompanySlider() {
               <Hulu />
             </div>
             <div>
+              <ZEIT />
+            </div>
+            <div>
               <Coinbase />
             </div>
             <div>
@@ -97,9 +104,6 @@ export default function CompanySlider() {
             </div>
             <div>
               <Binance />
-            </div>
-            <div>
-              <Pling />
             </div>
           </div>
         )}
