@@ -67,7 +67,7 @@ export default () => (
             description={
               <span>
                 The latest news about Next.js <br className="display-mobile" />
-                by the ZEIT team
+                from the ZEIT team
               </span>
             }
           />
