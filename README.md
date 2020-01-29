@@ -22,5 +22,4 @@ We really appreciate any contribution.
 
 ## Related Repositories
 
-- [zeit/next.js](https://github.com/zeit/next.js)
-- [zeit/next-plugins](https://github.com/zeit/next-plugins)
+- [Next.js GitHub repository](https://github.com/zeit/next.js)
