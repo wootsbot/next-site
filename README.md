@@ -1,6 +1,6 @@
 # Next.js website
 
-The official website for Next.js.
+The official website for Next.js, by [ZEIT](https://zeit.co/).
 
 ## Contribution
 
@@ -22,5 +22,5 @@ We really appreciate any contribution.
 
 ## Related Repositories
 
-- [Next.js](https://github.com/zeit/next.js)
-- [Next.js Plugins](https://github.com/zeit/next-plugins)
+- [zeit/next.js](https://github.com/zeit/next.js)
+- [zeit/next-plugins](https://github.com/zeit/next-plugins)
