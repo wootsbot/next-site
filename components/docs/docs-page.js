@@ -31,7 +31,7 @@ function DocsPage({ route, routes, html }) {
       <div className="page-nav">
         {prevRoute ? (
           <Button href={href} as={removeFromLast(prevRoute.path, '.')}>
-            <ArrowIcon left>
+            <ArrowIcon left flex>
               <LeftArrow color="#0070f3" />
             </ArrowIcon>
             {prevRoute.title}
@@ -42,7 +42,7 @@ function DocsPage({ route, routes, html }) {
         {nextRoute && (
           <Button href={href} as={removeFromLast(nextRoute.path, '.')}>
             {nextRoute.title}
-            <ArrowIcon right>
+            <ArrowIcon right flex>
               <RightArrow color="#0070f3" />
             </ArrowIcon>
           </Button>
