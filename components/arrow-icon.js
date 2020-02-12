@@ -5,7 +5,6 @@ const ArrowIcon = ({ left, right, children, flex }) => (
       span {
         ${left ? 'margin-right: .5rem; margin-left: -.25rem;' : ''}
         ${right ? 'margin-left: .5rem; margin-right: -.25rem;' : ''}
-        display: inline-block;
         display: ${flex ? 'inline-flex' : 'inline-block'};
         vertical-align: middle;
         line-height: 1;
