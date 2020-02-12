@@ -8,13 +8,14 @@ import { getPaths, findRouteByPath, fetchDocsManifest } from '../../lib/docs/pag
 import { getRawFileFromRepo } from '../../lib/github';
 import markdownToHtml from '../../lib/docs/markdown-to-html';
 import PageContent from '../../components/page-content';
-import Header from '../../components/header';
-import Navbar from '../../components/navbar';
 import Container from '../../components/container';
 import DocsPage from '../../components/docs/docs-page';
 import SocialMeta from '../../components/social-meta';
 import { Sidebar, SidebarMobile, Post, Category, Heading } from '../../components/sidebar';
 import Page from '../../components/page';
+import Sticky from '../../components/sticky';
+import { useIsMobile } from '../../components/media-query';
+import FeedbackContext from '../../components/feedback-context';
 
 function getCategoryPath(routes) {
   const route = routes.find(r => r.path);
@@ -63,6 +64,7 @@ const Docs = ({ routes, route, data, html }) => {
   const router = useRouter();
   const { asPath } = router;
   const title = `${data.title || route.title} - Documentation | Next.js`;
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (asPath.startsWith('/docs#')) {
@@ -80,41 +82,42 @@ const Docs = ({ routes, route, data, html }) => {
   }, [asPath]);
 
   return (
-    <Page title={title} description={false}>
-      <PageContent>
-        <Header height={{ desktop: 64, mobile: 114 }} shadow defaultActive>
-          <Navbar />
-          <SidebarMobile>
-            <SidebarRoutes isMobile routes={routes} />
-          </SidebarMobile>
-        </Header>
-        <Container>
-          <div className="content">
-            <Sidebar fixed>
-              <SidebarRoutes routes={routes} />
-            </Sidebar>
-            <DocsPage route={route} routes={routes} html={html} />
-          </div>
-          <style jsx>{`
-            .content {
-              display: flex;
-              margin-top: 2rem;
-              margin-bottom: 5rem;
-            }
-            /* Remove the top margin of the first heading in the sidebar */
-            :global(.heading:first-child > h4) {
-              margin-top: 0;
-            }
-          `}</style>
-        </Container>
-        <SocialMeta
-          title={title}
-          url={`https://nextjs.org${asPath}`}
-          image="/static/twitter-cards/documentation.png"
-          description={data.description}
-        />
-      </PageContent>
-    </Page>
+    <FeedbackContext.Provider value={{ label: 'next-docs' }}>
+      <Page title={title} description={false} sticky={!isMobile}>
+        <PageContent>
+          <Sticky shadow>
+            <SidebarMobile>
+              <SidebarRoutes isMobile routes={routes} />
+            </SidebarMobile>
+          </Sticky>
+          <Container>
+            <div className="content">
+              <Sidebar fixed>
+                <SidebarRoutes routes={routes} />
+              </Sidebar>
+              <DocsPage route={route} routes={routes} html={html} />
+            </div>
+            <style jsx>{`
+              .content {
+                position: relative;
+                display: flex;
+                margin-top: 2rem;
+              }
+              /* Remove the top margin of the first heading in the sidebar */
+              :global(.heading:first-child > h4) {
+                margin-top: 0;
+              }
+            `}</style>
+          </Container>
+          <SocialMeta
+            title={title}
+            url={`https://nextjs.org${asPath}`}
+            image="/static/twitter-cards/documentation.png"
+            description={data.description}
+          />
+        </PageContent>
+      </Page>
+    </FeedbackContext.Provider>
   );
 };
 

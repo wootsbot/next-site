@@ -3,7 +3,7 @@ import { removeFromLast } from '../../lib/docs/utils';
 import { GITHUB_URL, REPO_NAME, REPO_BRANCH } from '../../lib/github-constants';
 import getRouteContext from '../../lib/get-route-context';
 import Notification from './notification';
-import Feedback from './feedback';
+import FooterFeedback from '../footer-feedback';
 import Button from '../button';
 import ArrowIcon from '../arrow-icon';
 import RightArrow from '../icons/arrow-right';
@@ -51,7 +51,7 @@ function DocsPage({ route, routes, html }) {
 
       <hr />
 
-      <Feedback />
+      <FooterFeedback />
 
       <footer>
         <a href={editUrl} target="_blank" rel="noopener noreferrer">
@@ -61,8 +61,7 @@ function DocsPage({ route, routes, html }) {
 
       <style jsx>{`
         .docs {
-          max-width: calc(100% - 300px); /* Exclude size of the sidebar */
-          margin-left: calc(300px + 1rem); /* Fixed sidebar width + margin */
+          max-width: 100%;
         }
         @media screen and (max-width: 950px) {
           .docs {
@@ -80,8 +79,9 @@ function DocsPage({ route, routes, html }) {
           font-size: 0.875rem;
           justify-content: flex-end;
           border-top: 1px solid #eaeaea;
-          margin-top: 2rem;
           padding: 1.25rem 0;
+          margin-top: 2rem;
+          margin-bottom: 5rem;
         }
       `}</style>
       <style jsx global>{`
