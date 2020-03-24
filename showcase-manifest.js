@@ -960,6 +960,15 @@ const mapping = {
     alexa: 1043137,
     internalUrl: 'archbee',
     tags: ['dev', 'creative']
+  },
+  'react-next-boilerplate': {
+    title: 'React Next Boilerplate',
+    link: 'https://www.reactnextboilerplate.com',
+    src: '/static/images/showcases/react-next-boilerplate.jpg',
+    srcFallback: true,
+    alexa: 1216,
+    internalUrl: 'react-next-boilerplate',
+    tags: ['dev']
   }
 };
 
